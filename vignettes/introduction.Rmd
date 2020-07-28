@@ -1,0 +1,23 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(snxt)
+## the following command will pull the data contained in the surveycto (version > 2.70) form with formid = myformid into the dataframe df. 
+df<-pull_data("myformid","myservername","myusername","keyfile","mypassword")
+## if you are using surveycto version older than 2.70, use the following command
+df<-pull_data("myformid","myservername","myusername","keyfile",newserver = F)
+```
