@@ -5,7 +5,7 @@
 #' @param servername character: is the name of the Surveycto server.
 #' @param username character: is the username for the account being used to login to the server.
 #' @param password character: is the password for the account being used to login to the server.
-#' @param key character: name of the private encryption file, if applicable. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). Defaults to NULL. If the form is encrypted and a key is not provided, only the fields marked as publishable will be returned.
+#' @param key character: name of the private encryption file, if applicable. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). If the form is encrypted and a key is not provided, only the fields marked as publishable will be returned. Defaults to NULL.
 #' @param newserver logical: TRUE for surveycto version 2.70 and above. FALSE otherwise. Default is TRUE.
 #' @return A dataframe containing the formdata in wide format
 #' @export

@@ -15,7 +15,7 @@ pull_data(formid, servername, username, password, key = NULL, newserver = T)
 
 \item{password}{character: is the password for the account being used to login to the server.}
 
-\item{key}{character: name of the private encryption file, if applicable. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). Defaults to NULL. If the form is encrypted and a key is not provided, only the fields marked as publishable will be returned.}
+\item{key}{character: name of the private encryption file, if applicable. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). If the form is encrypted and a key is not provided, only the fields marked as publishable will be returned. Defaults to NULL.}
 
 \item{newserver}{logical: TRUE for surveycto version 2.70 and above. FALSE otherwise. Default is TRUE.}
 }
