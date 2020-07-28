@@ -11,23 +11,20 @@
 #' @export
 
 pull_data<-function(formid,servername,username,password,key=NULL,newserver=T){
-  library(httr)
-  library(jsonlite)
-  library(readr)
   isdf<- FALSE
   waittime<-0
   if (is.null(key)) {
     while(!isdf){
       Sys.sleep(waittime)
       if (newserver){
-        request<-GET(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",formid,"?date=0"),
+        request<-httr::GET(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",formid,"?date=0"),
                      authenticate(username,password))
       } else {
-        request<-GET(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",formid,"?date=0"),
+        request<-httr::GET(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",formid,"?date=0"),
                      authenticate(username,password,type = "digest"))
       }
-      text<-content(request,"text")
-      import<-fromJSON(text,flatten = T)
+      text<-httr::content(request,"text")
+      import<-jsonlite::fromJSON(text,flatten = T)
       isdf<- is.data.frame(import)
       if(!isdf){
         waittime<-readr::parse_number(import$error$message) +1
@@ -37,20 +34,20 @@ pull_data<-function(formid,servername,username,password,key=NULL,newserver=T){
     while(!isdf){
       Sys.sleep(waittime)
       if (newserver){
-        request<-POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
+        request<-httr::POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
                              formid,"?date=0"),
                       authenticate(username,password),
                       body = list(private_key=upload_file(key)),
                       encode = "multipart")
       } else {
-        request<-POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
+        request<-httr::POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
                              formid,"?date=0"),
                       authenticate(username,password,type = "digest"),
                       body = list(private_key=upload_file(key)),
                       encode = "multipart")
       }
-      text<-content(request,"text")
-      import<-fromJSON(text,flatten = T)
+      text<-httr::content(request,"text")
+      import<-jsonlite::fromJSON(text,flatten = T)
       isdf<- is.data.frame(import)
       if(!isdf){
         waittime<-readr::parse_number(import$error$message) +1
