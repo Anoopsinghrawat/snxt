@@ -1,6 +1,6 @@
 #' Mounts veracrypt container directly from R
 #'
-#' This function mounts the veracrypt container directly from R
+#' This function mounts the veracrypt container directly from R. Also check the sister function \code{\link{vc_dismount}}.
 #' @param filename character: name of the veracrypt container. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd().
 #' @param drive character: drive name. Example - "Z://"
 #' @param password character: password of the veracrypt container.

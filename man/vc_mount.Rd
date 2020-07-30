@@ -24,7 +24,7 @@ vc_mount(
 Running the function will open veracrypt as specified. Returns a NULL object in R.
 }
 \description{
-This function mounts the veracrypt container directly from R
+This function mounts the veracrypt container directly from R. Also check the sister function \code{\link{vc_dismount}}.
 }
 \examples{
 vc_mount("C:/User/Dropbox/Project1/raw_data/veracrypt_raw", "k://", "veracryptpassword")

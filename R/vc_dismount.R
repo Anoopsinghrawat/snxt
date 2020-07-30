@@ -1,6 +1,6 @@
 #' Dismounts veracrypt container directly from R
 #'
-#' This function dismounts the veracrypt container directly from R
+#' This function dismounts the veracrypt container directly from R. Also check the sister function \code{\link{vc_mount}}.
 #' @param drive character: name of the drive from which to dismount the volume. Example - "Z://"
 #' @param vcexecutable character: name of the veracrypt executable file. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"
 #' @return Running the function will dismount the veracrypt volume as specified. Returns a NULL object in R.

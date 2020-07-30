@@ -18,7 +18,7 @@ vc_dismount(
 Running the function will dismount the veracrypt volume as specified. Returns a NULL object in R.
 }
 \description{
-This function dismounts the veracrypt container directly from R
+This function dismounts the veracrypt container directly from R. Also check the sister function \code{\link{vc_mount}}.
 }
 \examples{
 vc_dismount("k://")
