@@ -9,8 +9,8 @@
 #' @param newserver logical: TRUE for surveycto version 2.70 and above. FALSE otherwise. Default is TRUE.
 #' @return A dataframe containing the formdata in wide format
 #' @examples
-#' gp_survey<- pulldata("gp_survey_v1","gpcovid19","user(at)gmail.com","difficultpassword$793")
-#' gp_survey_encrypted<-pulldata("gp_survey_v1","gpcovid19","user(at)gmail.com","difficultpassword$793", key="C:/Users/Dropbox/gp_project/encryption_keys/gpkey_PRIVATEDONOTSHARE.pem")
+#' gp_survey<- pull_data("gp_survey_v1","gpcovid19","user(at)gmail.com","difficultpassword$793")
+#' gp_survey_encrypted<-pull_data("gp_survey_v1","gpcovid19","user(at)gmail.com","difficultpassword$793", key="C:/Users/Dropbox/gp_project/encryption_keys/gpkey_PRIVATEDONOTSHARE.pem")
 #' @export
 
 pull_data<-function(formid,servername,username,password,key=NULL,newserver=T){

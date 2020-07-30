@@ -20,3 +20,10 @@ Running the function will dismount the veracrypt volume as specified. Returns a 
 \description{
 This function dismounts the veracrypt container directly from R
 }
+\examples{
+vc_dismount("k://")
+
+vc_dismount("k://", vcexecutable="C:/Program Files/Veracrypt/Veracrypt.exe")
+
+vc_dismount("k://", vcexecutable="C:/Program Files (x86)/Veracrypt/Veracrypt.exe")
+}

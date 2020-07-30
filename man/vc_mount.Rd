@@ -26,3 +26,9 @@ Running the function will open veracrypt as specified. Returns a NULL object in 
 \description{
 This function mounts the veracrypt container directly from R
 }
+\examples{
+vc_mount("C:/User/Dropbox/Project1/raw_data/veracrypt_raw", "k://", "veracryptpassword")
+
+vc_mount(filename="C:/User/Dropbox/Project1/raw_data/veracrypt_raw", drive="k://", password="veracryptpassword", vcexecutable="C:/Program Files (x86)/VeraCrypt/VeraCrypt.exe")
+
+}
