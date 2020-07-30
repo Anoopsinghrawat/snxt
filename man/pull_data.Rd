@@ -23,5 +23,5 @@ pull_data(formid, servername, username, password, key = NULL, newserver = T)
 A dataframe containing the formdata in wide format
 }
 \description{
-This function pulls data from surveycto using their api. Typically, numeric fields will be read as character by R when downloaded using the api. The user will manually need to convert the object type as necessary.
+This function pulls data from surveycto using their api. Typically, numeric fields will be read as character by R when downloaded using the api. User will manually need to convert the field types as necessary.
 }

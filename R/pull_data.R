@@ -1,6 +1,6 @@
 #' Pull Surveycto data in R
 #'
-#' This function pulls data from surveycto using their api. Typically, numeric fields will be read as character by R when downloaded using the api. The user will manually need to convert the object type as necessary.
+#' This function pulls data from surveycto using their api. Typically, numeric fields will be read as character by R when downloaded using the api. User will manually need to convert the field types as necessary.
 #' @param formid character: is the Surveycto form id.
 #' @param servername character: is the name of the Surveycto server.
 #' @param username character: is the username for the account being used to login to the server.
