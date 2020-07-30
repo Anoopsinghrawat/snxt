@@ -25,3 +25,7 @@ A dataframe containing the formdata in wide format
 \description{
 This function pulls data from surveycto using their api. Typically, numeric fields will be read as character by R when downloaded using the api. User will manually need to convert the field types as necessary.
 }
+\examples{
+gp_survey<- pulldata("gp_survey_v1","gpcovid19","user(at)gmail.com","difficultpassword$793")
+gp_survey_encrypted<-pulldata("gp_survey_v1","gpcovid19","user(at)gmail.com","difficultpassword$793", key="C:/Users/Dropbox/gp_project/encryption_keys/gpkey_PRIVATEDONOTSHARE.pem")
+}
