@@ -12,7 +12,7 @@ vc_dismount(
 \arguments{
 \item{drive}{character: name of the drive from which to dismount the volume. Example - "Z://"}
 
-\item{vcexecutable}{character: name of the veracrypt executable file. Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"}
+\item{vcexecutable}{character: name of the veracrypt executable file. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"}
 }
 \value{
 Running the function will dismount the veracrypt volume as specified. Returns a NULL object in R.

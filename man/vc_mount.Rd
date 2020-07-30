@@ -18,7 +18,7 @@ vc_mount(
 
 \item{password}{character: password of the veracrypt container.}
 
-\item{vcexecutable}{character: name of the veracrypt executable file. Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"}
+\item{vcexecutable}{character: name of the veracrypt executable file. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"}
 }
 \value{
 Running the function will open veracrypt as specified. Returns a NULL object in R.

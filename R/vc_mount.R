@@ -4,7 +4,7 @@
 #' @param filename character: name of the veracrypt container. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd().
 #' @param drive character: drive name. Example - "Z://"
 #' @param password character: password of the veracrypt container.
-#' @param vcexecutable character: name of the veracrypt executable file. Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"
+#' @param vcexecutable character: name of the veracrypt executable file. If it doesn't contain an absolute path, the file name is relative to the current working directory, getwd(). Default is "C:/Program Files/VeraCrypt/VeraCrypt.exe"
 #' @return Running the function will open veracrypt as specified. Returns a NULL object in R.
 #' @export
 
