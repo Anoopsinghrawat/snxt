@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "anoop.rawat@ifmr.ac.in",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: The package contains functions that are frequently used at the networks lab. At the moment it contains two functions. Function 'rvera' opens a veracrypt containter directly from R. Function 'pull_data' pull data from surveycto to R.
+Description: The package contains functions that are frequently used at the networks lab. Current functions- 1) 'vc_open' opens a veracrypt containter directly from R. 2) 'pull_data' pulls data to R using surveycto api.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
