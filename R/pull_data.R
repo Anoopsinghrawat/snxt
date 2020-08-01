@@ -40,13 +40,13 @@ pull_data<-function(formid,servername,username,password,key=NULL,newserver=T){
         request<-httr::POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
                              formid,"?date=0"),
                             httr::authenticate(username,password),
-                      body = list(private_key=upload_file(key)),
+                      body = list(private_key=httr::upload_file(key)),
                       encode = "multipart")
       } else {
         request<-httr::POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
                              formid,"?date=0"),
                             httr::authenticate(username,password,type = "digest"),
-                      body = list(private_key=upload_file(key)),
+                      body = list(private_key=httr::upload_file(key)),
                       encode = "multipart")
       }
       text<-httr::content(request,"text")
