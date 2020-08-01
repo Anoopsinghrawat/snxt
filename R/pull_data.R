@@ -21,10 +21,10 @@ pull_data<-function(formid,servername,username,password,key=NULL,newserver=T){
       Sys.sleep(waittime)
       if (newserver){
         request<-httr::GET(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",formid,"?date=0"),
-                     authenticate(username,password))
+                     httr::authenticate(username,password))
       } else {
         request<-httr::GET(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",formid,"?date=0"),
-                     authenticate(username,password,type = "digest"))
+                     httr::authenticate(username,password,type = "digest"))
       }
       text<-httr::content(request,"text")
       import<-jsonlite::fromJSON(text,flatten = T)
@@ -39,13 +39,13 @@ pull_data<-function(formid,servername,username,password,key=NULL,newserver=T){
       if (newserver){
         request<-httr::POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
                              formid,"?date=0"),
-                      authenticate(username,password),
+                            httr::authenticate(username,password),
                       body = list(private_key=upload_file(key)),
                       encode = "multipart")
       } else {
         request<-httr::POST(paste0("https://",servername,".surveycto.com/api/v2/forms/data/wide/json/",
                              formid,"?date=0"),
-                      authenticate(username,password,type = "digest"),
+                            httr::authenticate(username,password,type = "digest"),
                       body = list(private_key=upload_file(key)),
                       encode = "multipart")
       }
