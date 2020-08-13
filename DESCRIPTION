@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "anoop.rawat@ifmr.ac.in",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: The package contains functions that are frequently used at the networks lab. Current functions-  1) 'pull_data' pulls data to R using surveycto api. 2) 'vc_mount' mounts a veracrypt containter directly from R. 3) 'vc_dismount' dismounts a veracrypt container directly from R.
+Description: The package contains functions that are frequently used at the networks lab. Current functions-  1) 'pull_data' pulls data to R using surveycto api. 2)pull_media downloads the media collected during the survey 3) 'vc_mount' mounts a veracrypt containter directly from R. 4) 'vc_dismount' dismounts a veracrypt container directly from R.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
