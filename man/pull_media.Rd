@@ -36,9 +36,9 @@ pull_media(
 The media files corresponding to the required variable will be downloaded in the specified folder.
 }
 \description{
-This function saves the media that were collected as a part of the survey. pull_media should be used once data is downloaded using pull_data and an R dataframe is generated. In the data frame, the media variable will contain links that will be used to download the media files
+This function saves the media that were collected during the survey. pull_media should be used once data is downloaded using pull_data and an R dataframe is generated. In the data frame, the media variable will contain links that will be used to download the media files
 }
 \examples{
 pull_media("dataframe_formdata","respondent_picture","user(at)gmail.com","passwordhere","C:/Users//Dropbox/projectfolder/mediafiles/pictures","jpg")
-#' pull_media("dataframe_formdata","respondent_picture","user(at)gmail.com","passwordhere","C:/Users//Dropbox/projectfolder/mediafiles/pictures","jpg",key="C:/Users/Dropbox/projectfolder/encryption_keys/projectdata_PRIVATEDONOTSHARE.pem")
+pull_media("dataframe_formdata","respondent_picture","user(at)gmail.com","passwordhere","C:/Users//Dropbox/projectfolder/mediafiles/pictures","jpg",key="C:/Users/Dropbox/projectfolder/encryption_keys/projectdata_PRIVATEDONOTSHARE.pem")
 }
